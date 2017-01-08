@@ -25,7 +25,7 @@ ifconfig
 ifconfig wlp2s0b1 down
 
 #Configure for monitor mode
-ifconfig wlp2s0b1 mode monitor
+iwconfig wlp2s0b1 mode monitor
 
 #Bring the interface up
 ifconfig wlp2s0b1 down
@@ -36,3 +36,11 @@ sudo apt-get install scapy
 
 #Start scanning the interface for probe requests
 python wifiscan.py wlp2s0b1
+
+##Note: when an error 'node_pcap 802.11 link-layer types supported only on 802.11' shows --> means the adapter is not in monitor mode
+##Note: NetworkManager keeps changing the card back to managed mode, stop NetworkManager, change to monitor mode, start NetworkManager
+## /etc/init.d/network-manager start/stop
+
+#Installing node_pcap:
+#sudo apt-get install libpcap-dev
+#npm install https://github.com/mranney/node_pcap.git
