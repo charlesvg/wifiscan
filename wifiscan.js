@@ -1,9 +1,12 @@
 let pcap = require('pcap');
+let _ = require('lodash');
+
 
 let interfaceName = 'wlp2s0b1';
 let libpcapFilters = '(type mgt) and (type mgt subtype probe-req)';
 const MANAGEMENT_FRAME = 0;
 const PROBE_REQUEST = 4;
+
 
 pcap.createSession(interfaceName, libpcapFilters).on('packet', (packet) => {
     let payload = pcap.decode.packet(packet).payload;
@@ -24,4 +27,3 @@ function calculateDistance(signalLevelInDb, freqInMHz) {
     let exp = (27.55 - (20.0 * (Math.log(freqInMHz) / Math.log(10))) + Math.abs(signalLevelInDb)) / 20.0;
     return Math.pow(10.0, exp);
 }
-
