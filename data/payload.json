@@ -1,0 +1,164 @@
+{
+  "link_type": "LINKTYPE_IEEE802_11_RADIO",
+  "pcap_header": {
+    "tv_sec": 1483890294,
+    "tv_usec": 777084,
+    "caplen": 100,
+    "len": 100
+  },
+  "payload": {
+    "headerRevision": 0,
+    "headerPad": 0,
+    "headerLength": 26,
+    "signalStrength": -36,
+    "frequency": 2462,
+    "antenna": 0,
+    "ieee802_11Frame": {
+      "frameControl": 64,
+      "version": 0,
+      "type": 0,
+      "subType": 4,
+      "flags": {
+        "raw": 0,
+        "moreFragments": false,
+        "isRetry": false,
+        "moreData": false,
+        "encrypted": false,
+        "ordered": false
+      },
+      "duration": 0,
+      "bssid": {
+        "addr": [
+          255,
+          255,
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "shost": {
+        "addr": [
+          192,
+          238,
+          251,
+          146,
+          112,
+          197
+        ]
+      },
+      "dhost": {
+        "addr": [
+          255,
+          255,
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "fragSeq": 4115,
+      "probe": {
+        "tags": [
+          {
+            "type": "ssid",
+            "typeId": 0,
+            "length": 0,
+            "value": {
+              "type": "Buffer",
+              "data": [
+
+              ]
+            },
+            "ssid": ""
+          },
+          {
+            "type": "rates",
+            "typeId": 1,
+            "length": 4,
+            "value": {
+              "type": "Buffer",
+              "data": [
+                2,
+                4,
+                11,
+                22
+              ]
+            }
+          },
+          {
+            "type": "extended_rates",
+            "typeId": 50,
+            "length": 8,
+            "value": {
+              "type": "Buffer",
+              "data": [
+                12,
+                18,
+                24,
+                36,
+                48,
+                72,
+                96,
+                108
+              ]
+            }
+          },
+          {
+            "type": "unknown",
+            "typeId": 45,
+            "length": 26,
+            "value": {
+              "type": "Buffer",
+              "data": [
+                111,
+                1,
+                3,
+                255,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "presentFields": {
+      "tsft": true,
+      "flags": true,
+      "rate": true,
+      "channel": true,
+      "fhss": false,
+      "signalStrength": true,
+      "signalNoise": false,
+      "lockQuality": false,
+      "txAttenuation": false,
+      "dbTxAttenuation": false,
+      "dbmTxPower": false,
+      "antenna": true,
+      "dbAntennaSignal": false,
+      "dbAntennaNoise": false,
+      "rxFlags": true
+    }
+  }
+}
