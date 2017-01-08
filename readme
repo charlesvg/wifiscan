@@ -1,2 +1,2 @@
 Simple script demonstrating how to scan for probe requests on wifi using
-a Broadcom BCM43228 adapter, tcpdump, scapy and python.
+a Broadcom BCM43228 adapter, libpcap and node_pcap.
