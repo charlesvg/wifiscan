@@ -2,12 +2,14 @@ let pcap = require('pcap');
 
 let interfaceName = 'wlp2s0b1';
 let libpcapFilters = '(type mgt) and (type mgt subtype probe-req)';
+const MANAGEMENT_FRAME = 0;
+const PROBE_REQUEST = 4;
 
 pcap.createSession(interfaceName, libpcapFilters).on('packet', (packet) => {
-    var payload = pcap.decode.packet(packet).payload;
-    var frame = payload.ieee802_11Frame;
+    let payload = pcap.decode.packet(packet).payload;
+    let frame = payload.ieee802_11Frame;
 
-    if (frame.type === 0 && frame.subType === 4) {
+    if (frame.type === MANAGEMENT_FRAME && frame.subType === PROBE_REQUEST) {
         console.log(
             'Source:', frame.shost.addr,
             'Signal:', payload.signalStrength,
