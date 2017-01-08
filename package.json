@@ -1,0 +1,24 @@
+{
+  "name": "wifiscan",
+  "version": "1.0.0",
+  "description": "Simple script demonstrating how to scan for probe requests on wifi using a Broadcom BCM43228 adapter, tcpdump, scapy and python.",
+  "main": "wifiscan.js",
+  "dependencies": {
+    "nodejs": "0.0.0",
+    "pcap": "git+https://github.com/mranney/node_pcap.git"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charlesvg/wifiscan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charlesvg/wifiscan/issues"
+  },
+  "homepage": "https://github.com/charlesvg/wifiscan#readme"
+}
